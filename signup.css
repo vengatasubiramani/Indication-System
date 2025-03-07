@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+*{
+    font-family: 'Poppins', sans-serif;
+}
+/* Body styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+/* Section styles */
+section {
+    max-width: 400px;
+    margin: 50px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Input styles */
+.input {
+    margin-bottom: 20px;
+}
+
+.input label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.input input[type="text"],
+.input input[type="email"],
+.input input[type="password"],
+.input input[type="number"] {
+    width: calc(100% - 10px);
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Button styles */
+#signupbtn {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+    display: block;
+    margin: auto;
+}
+
+#signupbtn:hover {
+    background-color: #0056b3;
+}
+
+/* Link styles */
+a {
+    color: #007bff;
+    text-decoration: none;
+    text-align: center;
+    display: block;
+    margin: 10px;
+}
+
+a:hover {
+    text-decoration: underline;
+    
+}
+
+h1{
+    width: 100px;
+    margin: 10px;
+    margin: auto;
+    text-align: center;
+    text-transform: uppercase;
+    border-bottom: 1px solid black;
+    padding-bottom: 5px;
+}
+.box{
+    margin-top: 20px;
+    padding: 10px;
+}

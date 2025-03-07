@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OTP Page</title>
+    <link rel="stylesheet" href="otp.css">
+</head>
+
+<body>
+    <div class="otp-box">
+        <h1>OTP</h1>
+        <div class="box">
+            <input type="text" id="otpInput" placeholder="OTP">
+            <div id="otpError"></div>
+            <button onclick="checkotp()">Check OTP</button>
+        </div>
+    </div>
+
+    <script>
+        function checkotp() {
+            const cotp = document.getElementById('otpInput').value;
+            const otpError = document.getElementById('otpError');
+            const urlParams = new URLSearchParams(window.location.search);
+            let otp = urlParams.get('otp');
+            let loginAttempt = parseInt(urlParams.get('loginAttempt')) || 0; // Get login attempt count from URL, default to 0
+            
+            if (cotp.toLowerCase() === otp.toString()) {
+                otpError.innerText = 'OTP is correct';
+                otpError.style.color = "green";
+                
+                loginAttempt=2;
+                window.location.href = `login.html?loginAttempt=${loginAttempt}`;
+            } else {
+                otpError.innerText = 'OTP is incorrect';
+                otpError.style.color = "red";
+            }
+        }
+    </script>
+</body>
+</html>

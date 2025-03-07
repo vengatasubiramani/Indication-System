@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question Verification</title>
+    <link rel="stylesheet" href="question.css">
+</head>
+<body>
+    <section>
+    
+            <div class="questions">
+                <h1>Questions</h1>
+                <div class="box">
+                    <div class="input">
+                        <label for="q1">Enter your last 4 digits of Aadhaar Number</label>
+                        <input type="number" id="q1" placeholder="xxxx">
+                    </div>
+                    <div class="input">
+                        <label for="q2">What is your favorite movie?</label>
+                        <input type="text" id="q2" placeholder="Eg. Titanic">
+                    </div>
+                    <div class="error" id="error"></div>
+                    <button onclick="checkAns()">Submit</button>
+                </div>
+            </div>
+
+    </section>
+    
+
+    <script>
+        const q1El = document.getElementById("q1");
+        const q2El = document.getElementById("q2");
+        const errorEL = document.getElementById("error");
+
+        const urlParams = new URLSearchParams(window.location.search);
+        let q1 = urlParams.get('q1');
+        let q2 = urlParams.get('q2');
+
+        function checkAns() {
+            if (q1El.value === q1 && q2El.value === q2) {
+                errorEL.innerText = "Answer is Correct";
+                errorEL.style.color = "green";
+                // Redirect to login page if answers are correct
+                window.location.href = 'login.html';
+            } else {
+                errorEL.innerText = 'Answer is incorrect';
+                errorEL.style.color = "red";
+            }
+        }
+    </script>
+</body>
+</html>

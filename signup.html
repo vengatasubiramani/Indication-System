@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up page</title>
+    <link rel="stylesheet" href="signup.css">
+</head>
+<body>
+    <section>
+        <h1>Sign Up</h1>
+        <div class="box">
+            <div class="input">
+                <label for="name">Username : </label>
+                <input type="text" id="name" placeholder="Name">
+            </div>
+            <div class="input">
+                <label for="email">Email : </label>
+                <input type="email" id="email" placeholder="Email">
+            </div>
+            <div class="input">
+                <label for="password">Password : </label>
+                <input type="password" name="password" id="password" placeholder="Password">
+            </div>
+            <div class="input">
+                <label for="re_password">Confirm Password : </label>
+                <input type="password" name="re_password" id="re_password" placeholder="Re-Enter Password">
+            </div>
+            <div class="questions">
+                <div class="input">
+                    <label for="q1">Enter your last 4 digit of Aadhaar Number</label>
+                    <input type="number" id="q1" placeholder="xxxx">
+                </div>
+                <div class="input">
+                    <label for="q2">What is your favourite movie?</label>
+                    <input type="text" id="q2" placeholder="Eg. Titanic">
+                </div>
+            </div>
+            <button id="signupbtn">Sign Up</button>
+            <a href="login.html">Existing User ?</a>
+        </div>
+    </section>
+    <script src="signup.js" type="module"></script>
+</body>
+</html>
